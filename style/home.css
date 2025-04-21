@@ -1,0 +1,90 @@
+.landing {
+  position: relative;
+  width: 100vw; /* Full width of the viewport */
+  height: 100dvh; /* Full height of the viewport */
+  overflow: hidden; /* Ensure nothing overflows out of the section */
+}
+
+.landing img {
+  width: 100%; /* Make the image cover the full width */
+  height: 100%; /* Make the image cover the full height */
+  object-fit: fill; /* Ensure the image covers the area without distortion */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 10%; /* Positioned closer to the top */
+  left: 50%;
+  transform: translateX(-50%); /* Only translating horizontally */
+  text-align: center;
+  color: white; /* White text for contrast */
+  font-family: Arial, sans-serif; /* Choose a suitable font */
+}
+
+.text-overlay h2 {
+  font-size: 2rem; /* Adjust as needed */
+  font-weight: bold;
+  margin: 0;
+}
+
+.text-overlay p {
+  font-size: 1.2rem; /* Adjust as needed */
+  margin-top: 10px;
+}
+
+/* Media Query for tablets and smaller screens */
+@media (max-width: 768px) {
+  .text-overlay {
+    top: 5%; /* Adjust the vertical position for smaller screens */
+  }
+
+  .text-overlay h2 {
+    font-size: 1.5rem; /* Smaller font size for headings */
+  }
+
+  .text-overlay p {
+    font-size: 1rem; /* Smaller font size for paragraph */
+  }
+
+  .landing {
+    position: relative;
+    width: fit-content; /* Full width of the viewport */
+    height: fit-content; /* Full height of the viewport */
+    overflow: hidden; /* Ensure nothing overflows out of the section */
+  }
+
+  .landing img {
+    width: 100%; /* Make the image cover the full width */
+    height: 100%; /* Make the image cover the full height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+  }
+}
+
+/* Media Query for mobile screens */
+@media (max-width: 480px) {
+  .text-overlay {
+    top: 5%; /* Keep the text overlay closer to the top on smaller screens */
+  }
+
+  .text-overlay h2 {
+    font-size: 0.9rem; /* Even smaller font size for small screens */
+  }
+
+  .text-overlay p {
+    margin-top: 1px;
+    font-size: 0.5rem; /* Even smaller font size for paragraph */
+  }
+
+  .landing {
+    position: relative;
+    width: fit-content; /* Full width of the viewport */
+    height: fit-content; /* Full height of the viewport */
+    overflow: hidden; /* Ensure nothing overflows out of the section */
+  }
+
+  .landing img {
+    width: 100%; /* Make the image cover the full width */
+    height: 100%; /* Make the image cover the full height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+  }
+}
