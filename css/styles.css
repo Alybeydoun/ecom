@@ -5,14 +5,23 @@
     box-sizing: border-box;
 }
 
-:root {
+/* :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
     --background-color: #ffffff;
     --text-color: #2c3e50;
     --transition-speed: 0.3s;
-}
+} */
+
+:root {
+    --primary-color: #8c4d2e;
+    --secondary-color: #e19d2e;
+    --accent-color: #e2b09f;
+    --background-color: #faf7f4;
+    --text-color: #00d9ff;
+    --transition-speed: 0.3s;
+  }
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -23,7 +32,7 @@ body {
 
 /* Navbar Styles */
 #first-nav {
-    background-color: var(--background-color);
+    background-color: var(--secondary-color);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -69,7 +78,7 @@ body {
 
 .item a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--background-color);
     font-weight: 500;
     position: relative;
     padding: 0.5rem 0;
@@ -83,12 +92,12 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     transition: width var(--transition-speed) ease;
 }
 
 .item a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .item a:hover::after {
@@ -120,14 +129,14 @@ body {
 
 .search-container input:focus {
     outline: none;
-    border-color: var(--secondary-color);
+    border-color: var(--primary-color);
     background-color: white;
 }
 
 .search-container button {
     background: none;
     border: none;
-    color: var(--text-color);
+    color: var(--primary-color);
     cursor: pointer;
     position: absolute;
     right: 10px;
@@ -148,19 +157,20 @@ body {
 .cart i {
     font-size: 1.25rem;
     transition: transform var(--transition-speed) ease;
+    color: var(--primary-color);
 }
 
 .cart:hover i {
     transform: scale(1.1);
-    color: var(--secondary-color);
+    color: var(--background-color);
 }
 
 .cart-count {
     position: absolute;
     top: -5px;
     right: -5px;
-    background-color: var(--accent-color);
-    color: white;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
     font-size: 0.75rem;
     padding: 0.2rem 0.5rem;
     border-radius: 50%;
@@ -177,11 +187,12 @@ body {
 
 .hamburger i {
     font-size: 1.5rem;
+    color: var(--background-color);
     transition: color var(--transition-speed) ease;
 }
 
 .hamburger:hover i {
-    color: var(--secondary-color);
+    color: var(--background-color);
 }
 
 /* Responsive Design */
@@ -192,7 +203,7 @@ body {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: var(--background-color);
+        background-color: var(--secondary-color);
         padding: 1rem;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
@@ -219,7 +230,8 @@ body {
 /* Animation for navbar on scroll */
 #first-nav.scrolled {
     padding: 0.5rem 2rem;
-    background-color: rgba(255, 255, 255, 0.95);
+    /* background-color: rgba(255, 255, 255, 0.95); */
+    background-color: var(--secondary-color);
     backdrop-filter: blur(5px);
 }
 
@@ -320,7 +332,7 @@ body {
 
 .dropdown-arrow {
     font-size: 1rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     display: inline-block;
     transition: transform 0.3s ease;
 }
@@ -353,11 +365,14 @@ body {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    background-color: var(--accent-color);
+
 }
 
 .hover-link {
     text-decoration: none;
-    color: var(--text-color);
+    /* color: black; */
+    color: var(--primary-color);
     padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -366,8 +381,8 @@ body {
 }
 
 .hover-link:hover {
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--background-color);
     transform: translateX(5px);
 }
 
@@ -672,7 +687,7 @@ body {
     transform: translate(-50%, -50%);
     width: 2px;
     height: 70%;
-    background: linear-gradient(to bottom, transparent, var(--secondary-color), transparent);
+    background: linear-gradient(to bottom, transparent, var(--accent-color), transparent);
 }
 
 .about-box {
@@ -737,7 +752,7 @@ body {
 
 .about-text h2 {
     font-size: 2.2rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
@@ -750,7 +765,7 @@ body {
     bottom: -5px;
     width: 0;
     height: 3px;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     transition: width 0.5s ease;
 }
 
@@ -761,7 +776,7 @@ body {
 .about-text p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--text-color);
+    color: var(--primary-color);
     opacity: 0.9;
 }
 
@@ -855,7 +870,8 @@ body {
 /* Contact Section Styles */
 .contact-section {
     padding: 2rem;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+    /* background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%); */
+    background-color: var(--primary-color);
     min-height: 80vh;
     display: flex;
     align-items: flex-start;
@@ -877,7 +893,7 @@ body {
 }
 
 .contact-info {
-    color: white;
+    color: var(--background-color);
     padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
